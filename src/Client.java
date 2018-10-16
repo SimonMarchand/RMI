@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 class Client implements Runnable {
   //Connection parameters
-  private String address;
-  private int port;
+  private final String address;
+  private final int port;
   private Socket socket;
 
   //IO communication
@@ -76,7 +76,7 @@ class Client implements Runnable {
    */
   private String ask() {
     sendRequest(request);
-    return request.strategy.executeAsClient(request);
+    return request.strategy.executeAsClient();
   }
 
   private void sendRequest(Request request) {

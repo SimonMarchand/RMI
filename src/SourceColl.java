@@ -1,8 +1,3 @@
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.PrintWriter;
-
 public class SourceColl extends StrategyToString {
 
   public SourceColl(ClientRequest request) {
@@ -15,7 +10,7 @@ public class SourceColl extends StrategyToString {
   }
 
   @Override
-  public String executeAsClient(Request request) {
+  public String executeAsClient() {
     this.request.fileExtension = ".java";
     this.request.fileFolder = "src";
     sendFileLength();
@@ -24,7 +19,7 @@ public class SourceColl extends StrategyToString {
   }
 
   @Override
-  public void executeAsServer(Request request) {
+  public void executeAsServer() {
     this.request.fileExtension = ".java";
     this.request.fileFolder = "server";
     saveFile();

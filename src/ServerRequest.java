@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.PrintWriter;
-import java.util.StringTokenizer;
 
 /***
  * Request helper for Server
@@ -36,6 +35,6 @@ public class ServerRequest extends Request {
       default:
         System.err.println("No strategyName identified");
     }
-    strategy.executeAsServer(this);
+    strategy.executeAsServer();
   }
 }

@@ -1,40 +1,21 @@
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 
 public abstract class StrategyToString implements Strategy {
-  protected Request request;
-//  PrintWriter printWriter;
-//  protected BufferedReader bufferedReader;
-//  DataOutputStream dataOutputStream;
-//  DataInputStream dataInputStream;
-//  String rawRequest = "";
-//  public String answer = "";
-//  String strategy = "";
-
-//  protected String filePath = "";
-//  protected String fileFolder = "";
-//  protected String fileName = "";
-//  protected String fileExtension = "";
-//  String method = "";
-//  final ArrayList<String> parameters = new ArrayList<>();
+  protected final Request request;
 
   @Override
   public abstract String toString();

@@ -1,8 +1,3 @@
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.PrintWriter;
-
 public class ObjectColl extends StrategyToString {
 
   public ObjectColl(ClientRequest request) {
@@ -15,7 +10,7 @@ public class ObjectColl extends StrategyToString {
   }
 
   @Override
-  public String executeAsClient(Request clientRequest) {
+  public String executeAsClient() {
     this.request.fileFolder = "src";
     this.request.fileExtension = ".obj";
     serialize(new Calc());
@@ -25,7 +20,7 @@ public class ObjectColl extends StrategyToString {
   }
 
   @Override
-  public void executeAsServer(Request serverRequest) {
+  public void executeAsServer() {
     Object object;
     this.request.fileFolder = "server";
     this.request.fileExtension = ".obj";

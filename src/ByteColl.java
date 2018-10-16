@@ -10,7 +10,7 @@ public class ByteColl extends StrategyToString {
   }
 
   @Override
-  public String executeAsClient(Request request) {
+  public String executeAsClient() {
     this.request.fileFolder = "src";
     this.request.fileExtension = ".java";
     compileClass();
@@ -21,7 +21,7 @@ public class ByteColl extends StrategyToString {
   }
 
   @Override
-  public void executeAsServer(Request request) {
+  public void executeAsServer() {
     this.request.fileExtension = ".class";
     this.request.fileFolder = "server";
     saveFile();
